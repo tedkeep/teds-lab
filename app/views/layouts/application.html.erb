@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TedsLab</title>
+    <title>Teds Lab</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +12,19 @@
   </head>
 
   <body>
-    <%= yield %>
+  <header class="min-h-screen bg-yellow-300 py-2 px-5 sm:px-10 md:px-20 lg:px-40">
+    <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2">
+      <div class="md:flex md:flex-col md:justify-center">
+        <h1 class="text-black text-4xl font-bold">Some SUPER fancy stuff!</h1>
+      </div>
+      <div class="">
+        <div class="w-full h-64 rounded-lg shadow-2xl bg-black">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <%= yield %>
+
   </body>
 </html>
