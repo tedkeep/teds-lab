@@ -15,4 +15,16 @@ ActiveStorage.start()
 require("trix")
 require("@rails/actiontext")
 
-import "stylesheets/application" // Add this line
+import "stylesheets/application"
+
+import { Application } from "stimulus"
+import { definitionsFromContext } from "stimulus/webpack-helpers"
+
+const application = Application.start()
+const context = require.context("controllers", true, /\.js$/)
+const contextComponents = require.context("../../components", true, /_controller\.js$/)
+application.load(
+  definitionsFromContext(context).concat(
+    definitionsFromContext(contextComponents)
+  )
+)
