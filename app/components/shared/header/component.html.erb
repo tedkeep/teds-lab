@@ -6,18 +6,23 @@
         </a>
 
         <div class="flex items-center justify-center mt-6 text-gray-600 capitalize dark:text-gray-300">
+          <a href="#" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6">
+            Blog
+          </a>
 
-            <a href="#" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6">
-              Blog
-            </a>
+          <a href="#" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6">
+            Showcases
+          </a>
 
-            <a href="#" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6">
-              Showcases
-            </a>
+          <a href="#" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6">
+            CV
+          </a>
 
-            <a href="#" class="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6">
-              CV
-            </a>
+          <% if helpers.user_signed_in? %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6" %>
+          <% else %>
+            <%= link_to 'Sign in', new_user_session_path, class: "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 mx-auto sm:mx-6" %>
+          <% end %>
         </div>
       </div>
     </nav>
