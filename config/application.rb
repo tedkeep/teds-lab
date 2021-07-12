@@ -37,6 +37,6 @@ module TedsLab
 
     # Will automatically load files all these sub-folders without them needing a
     # namespace.
-    config.autoload_paths += Dir[Rails.root.join('app', 'models', '**/')]
+    # config.autoload_paths += Dir[Rails.root.join('app', 'models', '**/')]
   end
 end
