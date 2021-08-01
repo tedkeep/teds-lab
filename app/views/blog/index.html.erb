@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <div>
+    <%= link_to post.title, blog_path(post.permalink) %>
+  </div>
+<% end %>

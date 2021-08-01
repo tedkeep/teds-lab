@@ -1,13 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: {
-    sign_in: 'login', sign_out: 'logout',
-    password: 'secret', confirmation: 'verification',
-    registration: 'register', edit: 'edit/profile'
-  }
 
-  namespace :blog do
-    resources :posts
-  end
+  resources :blog, only: %i[index show], constraints: { id: /[^.]+/ }
 
   root "index#index"
 
