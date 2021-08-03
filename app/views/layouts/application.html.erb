@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Teds Lab</title>
+    <%= favicon_link_tag "favicon.svg" %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,7 +16,8 @@
   <header>
     <nav class="flex flex-wrap items-center shadow-md justify-start py-2 px-5 lg:px-40 xl:px-80">
       <!-- logo -->
-      <%= image_tag "logo", alt: "Teds Lab", width: 120 %>
+      <%#= image_tag "logo", alt: "Teds Lab", width: 120 %>
+      <%= svg "logo" %>
 <!--      <img src="http://acmelogos.com/images/logo-1.svg" alt="ACME" width="120" />-->
       <!-- hamburger -->
       <div class="flex ml-auto md:hidden">
