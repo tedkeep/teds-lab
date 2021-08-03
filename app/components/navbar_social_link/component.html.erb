@@ -1,5 +1,3 @@
-<%= link_to @item[:link], class: "block md:inline-block text-purple-700 hover:text-blue-500 px-3 py-3 border-b-2 border-purple-900 md:border-none" do %>
+<%= link_to @item[:link], target: "_blank", rel: "nofollow", class: "block md:inline-block text-purple-700 hover:text-blue-500 px-3 py-3 border-b-2 border-purple-900 md:border-none" do %>
   <i class="<%= @item[:iconClass] %>"></i>
 <% end %>
-
-<%# block md:inline-block border-b-2 border-blue-900 md:border-none md:flex w-full md:w-8 md:h-8 md:ml-3 md:items-center md:justify-center text-right bg-purple-900 hover:bg-purple-700 text-white md:rounded-full %>
