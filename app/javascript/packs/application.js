@@ -15,6 +15,7 @@ ActiveStorage.start()
 require("trix")
 require("@rails/actiontext")
 
+import "@fortawesome/fontawesome-free/css/all"
 import "stylesheets/application"
 
 import { Application } from "stimulus"
