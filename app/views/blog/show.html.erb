@@ -1,3 +1,11 @@
-<h1><%= @post.title %></h1>
+<%= render MainContainer::Component.new do %>
+  <%= link_to blog_index_path, class: "inline-block bg-gray-100 rounded p-3 my-3 hover:bg-gray-200" do %>
+    <i class="fas fa-chevron-left"></i> Back
+  <% end %>
 
-<%= @post.body_html.html_safe %>
+  <%= render PageTitle::Component.new do %>
+    <%= @post.title %>
+  <% end %>
+
+  <%= @post.body_html.html_safe %>
+<% end %>

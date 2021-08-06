@@ -1,5 +1,15 @@
-<% @posts.each do |post| %>
-  <div>
-    <%= link_to post.title, blog_path(post.permalink) %>
+<%= render MainContainer::Component.new do %>
+  <%= render PageTitle::Component.new do %>
+    Posts 📖
+  <% end %>
+  <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-4">
+    <% @posts.each do |post| %>
+      <%= link_to blog_path(post.permalink) do %>
+        <div class="space-y-3 w-full h-full rounded-lg shadow-md bg-gray-200 p-5 hover:bg-gray-300 transition duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
+          <h3 class="font-semibold"><%= post.title %></h3>
+          <p><%= l post.published_on %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 <% end %>
