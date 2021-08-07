@@ -7,7 +7,23 @@
     @apply font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-snug mb-5;
   }
 
+  h2 {
+    @apply font-sans text-xl md:text-2xl font-bold leading-snug mb-5;
+  }
+
+  h3 {
+    @apply font-sans text-lg md:text-xl font-semibold leading-snug mb-5;
+  }
+
   p {
     @apply my-5;
+  }
+
+  .post a {
+    @apply text-purple-700 hover:underline
+  }
+
+  .post code {
+    @apply w-full p-5 bg-gray-800 text-gray-100 rounded inline-block whitespace-pre
   }
 }
