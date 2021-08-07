@@ -6,10 +6,10 @@
   <div class="mb-5 pb-5 border-b border-gray-200">
     <h1><%= @post.title %></h1>
 
-    <p>Published on <%= l @post.published_on %></p>
+    <p class="mb-0 font-semibold">Published on <%= l @post.published_on %></p>
   </div>
 
-  <div class="my-3">
+  <div class="post my-3">
     <%= @post.body_html.html_safe %>
   </div>
 <% end %>
