@@ -3,6 +3,10 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+  h1 {
+    @apply font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-snug mb-5;
+  }
+
   p {
     @apply my-5;
   }

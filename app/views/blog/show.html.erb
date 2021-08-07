@@ -4,9 +4,7 @@
   <% end %>
 
   <div class="mb-5 pb-5 border-b border-gray-200">
-    <%= render PageTitle::Component.new do %>
-      <%= @post.title %>
-    <% end %>
+    <h1><%= @post.title %></h1>
 
     <p>Published on <%= l @post.published_on %></p>
   </div>

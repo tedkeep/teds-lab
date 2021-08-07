@@ -1,7 +1,6 @@
 <%= render MainContainer::Component.new do %>
-  <%= render PageTitle::Component.new do %>
-    Posts 📖
-  <% end %>
+  <h1>Posts 📖</h1>
+
   <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-4">
     <% @posts.each do |post| %>
       <%= link_to blog_path(post.permalink) do %>
