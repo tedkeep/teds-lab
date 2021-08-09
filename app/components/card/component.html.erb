@@ -1,0 +1,9 @@
+<%= link_to blog_path(@link) do %>
+  <div class="space-y-3 w-full h-full rounded-lg shadow-md bg-gray-200 p-5 hover:bg-gray-300 transition duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
+    <h3 class="font-semibold"><%= @title %></h3>
+
+    <% if @description %>
+      <p><%= @description %></p>
+    <% end %>
+  </div>
+<% end %>

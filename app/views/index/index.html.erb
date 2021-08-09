@@ -20,17 +20,9 @@
   <div>
     <h2 class="inline-block font-sans text-xl md:text-2xl font-bold mr-3">Check out my latest blog posts.</h2> <p class="inline-block font-semibold">My little journeys in discovering new technologies.</p>
   </div>
-  <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-4">
-    <%= link_to blog_path(@posts.first.permalink) do %>
-      <div class="w-full h-full rounded-lg shadow-md bg-gray-200 p-5 hover:bg-gray-300 transition duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer hover:underline">
-        <h3 class="font-semibold"><%= @posts.first.title %></h3>
-      </div>
+  <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-6">
+    <% @posts.each do |post| %>
+      <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: post.permalink) %>
     <% end %>
-    <div class="w-full h-full rounded-lg shadow-md bg-gray-200 p-5 hover:bg-gray-300 transition duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
-      <h3 class="font-semibold">How this blog system was built</h3>
-    </div>
-    <div class="w-full h-full rounded-lg shadow-md bg-gray-200 p-5 hover:bg-gray-300 transition duration-200 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer">
-      <h3 class="font-semibold">Building PDFs with Prawn PDF</h3>
-    </div>
   </div>
 <% end %>
