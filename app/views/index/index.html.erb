@@ -1,16 +1,25 @@
 <!-- Hero Section -->
 <%= render MainContainer::Component.new do %>
-  <div class="space-y-5 md:space-y-0 md:py-5 md:grid md:grid-cols-2 md:gap-x-4">
+  <div class="space-y-5 md:space-y-0 md:py-5 md:grid md:grid-cols-2 md:gap-x-4 md:place-content-center">
     <!-- left -->
-    <div class="md:flex md:flex-col md:justify-center space-y-3 md:space-y-5">
+    <div class="md:grid md:justify-items-start md:grid-cols-1 space-y-3 md:space-y-5">
       <h1>Hi! I'm Ted. 👋 <br>Welcome to my Lab. 🧪</h1>
 
       <p class="font-semibold md:text-lg lg:text-xl">This is where I <span>tinker with tech</span> and break things. <br>And <em>hopefully</em> learn something along the way.</p>
+
+      <div class="animate-wiggle rounded-lg font-semibold md:text-lg lg:text-xl text-gray-100 bg-purple-500 px-5 py-2 inline-block">Alpha</div>
+
+      <p class="md:text-lg lg:text-xl">It's a little bare here at the moment. <br>This is a new website of mine so consider this the alpha version.</p>
     </div>
 
     <!-- right -->
-    <div class="w-full h-96 rounded-lg shadow-lg bg-purple-800">
-
+    <div class="w-full h-96 rounded-lg shadow-lg grid grid-cols-1 justify-center overflow-hidden">
+      <div class="bg-purple-500">
+        <h1 class=" text-gray-100 m-5">Some cool content will be linked here</h1>
+      </div>
+      <div class="bg-gray-300 p-5">
+        👀
+      </div>
     </div>
   </div>
 <% end %>
@@ -18,9 +27,10 @@
 <!-- Feature Section -->
 <%= render MainContainer::Component.new(styles: "md:space-y-5 bg-gray-100 shadow-md shadow-inner") do %>
   <div>
-    <h2 class="inline-block font-sans text-xl md:text-2xl font-bold mr-3">Check out my latest blog posts.</h2> <p class="inline-block font-semibold">My little journeys in discovering new technologies.</p>
+    <h2 class="inline-block font-sans text-xl md:text-2xl font-bold mr-3 mb-0">Check out my latest blog posts.</h2>
+    <p class="inline-block font-semibold">My little journeys in discovering new technologies.</p>
   </div>
-  <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-6">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     <% @posts.each do |post| %>
       <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: post.permalink) %>
     <% end %>
