@@ -32,4 +32,4 @@
 en:
   date:
     formats:
-      default: "%d-%m-%Y"
+      default: "%d %b %Y"
