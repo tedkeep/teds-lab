@@ -9,7 +9,7 @@
     <p class="mb-0 font-semibold">Published on <%= l @post.published_on %></p>
   </div>
 
-  <div class="post my-3">
+  <div class="post my-3 space-y-5">
     <%= @post.body_html.html_safe %>
   </div>
 <% end %>
