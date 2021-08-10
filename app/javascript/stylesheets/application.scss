@@ -23,7 +23,16 @@
     @apply text-purple-700 hover:underline
   }
 
+  // Inline code
   .post code {
-    @apply w-full p-5 bg-gray-800 text-gray-100 rounded inline-block whitespace-pre
+    @apply bg-gray-100 rounded p-1 font-semibold
+  }
+
+  // Multi line code
+  .post pre {
+    @apply w-full bg-gray-800 rounded-xl inline-block p-5 whitespace-pre
+  }
+  .post pre code {
+    @apply text-gray-100 bg-transparent p-0 rounded-none font-normal
   }
 }
