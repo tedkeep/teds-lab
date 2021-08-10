@@ -19,6 +19,7 @@
     @apply my-5;
   }
 
+  // Blog post styling (html is generated from markdown so requires base styles
   .post a {
     @apply text-purple-700 hover:underline
   }
@@ -34,5 +35,9 @@
   }
   .post pre code {
     @apply text-gray-100 bg-transparent p-0 rounded-none font-normal
+  }
+
+  .post ul {
+    @apply list-disc list-inside space-y-2
   }
 }
