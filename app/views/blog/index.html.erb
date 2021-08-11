@@ -3,7 +3,7 @@
     <h1>Posts 📖</h1>
   </div>
 
-  <div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-6">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     <% @posts.each do |post| %>
       <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: post.permalink) %>
     <% end %>
