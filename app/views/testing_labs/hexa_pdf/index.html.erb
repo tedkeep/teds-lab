@@ -1,1 +1,18 @@
-Hello HexaPDF
+<%= render MainContainer::Component.new do %>
+  <div class="flex flex-col-reverse md:flex-row gap-10">
+
+    <%= render NavCard::Component.new do |c| %>
+      <% c.links([
+                   {text: "Generating PDFs", link: generating_pdf_testing_labs_hexa_pdf_index_path, classes: "font-bold"},
+                   {text: "Side content", link: root_path},
+                   {text: "Side content", link: root_path},
+                   {text: "Side content", link: root_path},
+                 ]) %>
+    <% end %>
+
+    <div class="md:flex-grow md:align-center">
+      <turbo-frame id="content" src="<%= generating_pdf_testing_labs_hexa_pdf_index_path %>">
+      </turbo-frame>
+    </div>
+  </div>
+<% end %>

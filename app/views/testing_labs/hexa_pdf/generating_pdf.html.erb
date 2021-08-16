@@ -1,0 +1,13 @@
+<turbo-frame id="content">
+  <h1>Generating PDFs</h1>
+  <p>You can choose to fill in the form below. It's not compulsory, just a way to play around to see how your data is displayed on the PDF. Click 'generate' to get a PDF document delivered to you.</p>
+
+  <%= form_with scope: :pdf, url: generate_pdf_testing_labs_hexa_pdf_index_path do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <%= form.submit %>
+  <% end %>
+</turbo-frame>
