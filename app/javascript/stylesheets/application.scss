@@ -19,6 +19,10 @@
     @apply my-5;
   }
 
+  input[type='text'] {
+    @apply rounded border-gray-300 hover:border-gray-400
+  }
+
   // Blog post styling (html is generated from markdown so requires base styles
   .post a {
     @apply text-purple-700 hover:underline
