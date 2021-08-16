@@ -30,6 +30,7 @@
         <% [
              {link: root_path, text: 'Home'},
              {link: blog_index_path, text: 'Blog'},
+             {link: testing_labs_path, text: 'Testing Labs'},
            ].each do |nav_link| %>
           <%= render NavbarLink::Component.new(link: nav_link[:link], text: nav_link[:text]) %>
         <% end %>
