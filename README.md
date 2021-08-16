@@ -3,7 +3,7 @@
   
   **My web lab to tinker with tech**
   
-  www.tedslab.com
+  [www.tedslab.com](https://tedslab.com)
 </div>
 
 ## Development
