@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'redcarpet'
 # Add SVGs through asset pipeline
 gem 'inline_svg', '~> 1.7'
+# PDF generator
+gem 'prawn', '~> 2.4.0'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
