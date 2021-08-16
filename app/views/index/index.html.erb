@@ -32,7 +32,7 @@
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     <% @posts.each do |post| %>
-      <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: post.permalink) %>
+      <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: blog_path(post.permalink)) %>
     <% end %>
   </div>
 <% end %>
