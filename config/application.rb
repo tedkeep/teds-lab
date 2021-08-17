@@ -38,5 +38,7 @@ module TedsLab
     # Will automatically load files all these sub-folders without them needing a
     # namespace.
     # config.autoload_paths += Dir[Rails.root.join('app', 'models', '**/')]
+
+    config.action_view.form_with_generates_remote_forms = false
   end
 end
