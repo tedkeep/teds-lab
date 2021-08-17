@@ -1,0 +1,14 @@
+<%= render MainContainer::Component.new do %>
+  <div class="mb-5 border-b border-gray-200">
+    <h1 class="md:inline-block">Testing Labs 🧪</h1>
+    <p class="md:inline-block">Interactive labs to play around with different tech</p>
+  </div>
+
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <% [
+         {title: "HexaPDF", description: "Create and edit PDF documents", link: testing_labs_hexa_pdf_index_path}
+       ].each do |lab| %>
+      <%= render Card::Component.new(lab) %>
+    <% end %>
+  </div>
+<% end %>
