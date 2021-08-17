@@ -31,7 +31,8 @@
   pre {
     @apply w-full bg-gray-800 rounded-xl inline-block p-5 whitespace-pre
   }
-  pre code {
+  pre code,
+  .post pre code {
     @apply text-gray-100 bg-transparent p-0 rounded-none font-normal
   }
 
