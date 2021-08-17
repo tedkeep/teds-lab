@@ -36,9 +36,3 @@ You will also need [Bundler](http://bundler.io/) for installing the project's de
 ## Production
 
 The app is using [Heroku](heroku.com) to run in production. Heroku is still new to me so I'm learning how this should be effectively set up. Instructions will be added here in the future.
-
-## Additional information
-
-### Helpful resources
-
-* **[gravit.io](gravit.io)** - Gravit allows you to create illustrations. Then export them into many different formats. For me, this is where I created the Teds Lab logo. Exporting into an SVG was free too.

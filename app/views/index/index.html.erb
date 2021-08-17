@@ -13,20 +13,14 @@
     </div>
 
     <!-- right -->
-    <div class="mt-5 md:mt-0">
-      <%= link_to testing_labs_hexa_pdf_index_path do %>
-        <div class="w-full h-96 rounded-lg shadow-lg overflow-hidden transition duration-200 ease-in-out transform hover:scale-105">
-          <div class="bg-purple-500 h-2/3 overflow-hidden">
-            <%= image_tag "hexa_pdf.png" %>
-          </div>
-          <div class="bg-purple-500 p-5 h-1/3">
-            <h2 class="text-gray-100">Generating PDFs using HexaPDF</h2>
-            <p class="text-gray-100">A useful tool for many end user applications.</p>
-          </div>
-        </div>
-      <% end %>
+    <div class="w-full h-96 rounded-lg shadow-lg grid grid-cols-1 justify-center overflow-hidden">
+      <div class="bg-purple-500">
+        <h1 class=" text-gray-100 m-5">Some cool content will be linked here</h1>
+      </div>
+      <div class="bg-gray-300 p-5">
+        👀
+      </div>
     </div>
-
   </div>
 <% end %>
 
@@ -38,7 +32,7 @@
   </div>
   <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
     <% @posts.each do |post| %>
-      <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: blog_path(post.permalink)) %>
+      <%= render Card::Component.new(title: post.title, description: l(post.published_on), link: post.permalink) %>
     <% end %>
   </div>
 <% end %>
