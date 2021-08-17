@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     resources :hexa_pdf, only: %i[index] do
       collection do
         get 'generating_pdf'
-        post 'generate_pdf'
+        get 'generate_pdf'
+
+        get 'editing_pdf'
       end
     end
   end
