@@ -19,22 +19,6 @@
     @apply my-5;
   }
 
-  input[type='text'] {
-    @apply rounded border-gray-300 hover:border-gray-400
-  }
-
-  input[type='submit'] {
-    @apply rounded p-2 bg-purple-600 text-gray-100 cursor-pointer hover:bg-purple-700
-  }
-
-  // Multi line code
-  pre {
-    @apply w-full bg-gray-800 rounded-xl inline-block p-5 whitespace-pre
-  }
-  pre code {
-    @apply text-gray-100 bg-transparent p-0 rounded-none font-normal
-  }
-
   // Blog post styling (html is generated from markdown so requires base styles
   .post a {
     @apply text-purple-700 hover:underline
@@ -43,6 +27,14 @@
   // Inline code
   .post code {
     @apply bg-gray-100 rounded p-1 font-semibold
+  }
+
+  // Multi line code
+  .post pre {
+    @apply w-full bg-gray-800 rounded-xl inline-block p-5 whitespace-pre
+  }
+  .post pre code {
+    @apply text-gray-100 bg-transparent p-0 rounded-none font-normal
   }
 
   .post ul {
